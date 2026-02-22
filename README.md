@@ -53,6 +53,8 @@ react_portfolio/
 npm install
 ```
 
+See [INSTALL.md](INSTALL.md) for detailed installation instructions.
+
 ### Development
 ```bash
 npm run dev
