@@ -1,5 +1,5 @@
 import React from 'react'
-import { FiGrid } from 'react-icons/fi'
+import { FiTerminal } from 'react-icons/fi'
 import { useMatrix } from '../../context/MatrixContext'
 import { useTheme } from '../../context/ThemeContext'
 
@@ -22,13 +22,13 @@ const MatrixToggle = () => {
       aria-label={isMatrixEnabled ? 'Disable matrix background' : 'Enable matrix background'}
       title={isMatrixEnabled ? 'Turn off falling code effect' : 'Turn on falling code effect'}
     >
-      <FiGrid 
+      <FiTerminal
         size={20} 
         className={`transition-transform duration-300 ${isMatrixEnabled ? 'animate-pulse' : ''}`}
       />
       {isMatrixEnabled && (
         <span className="ml-2 text-xs font-mono hidden sm:inline">
-          ON
+          Dev Mode
         </span>
       )}
     </button>

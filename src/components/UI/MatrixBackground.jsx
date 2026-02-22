@@ -57,7 +57,7 @@ const MatrixBackground = () => {
     canvas.height = dimensions.height
 
     // Calculate font size based on screen width
-    const fontSize = Math.max(14, Math.min(20, dimensions.width / 80))
+    const fontSize = Math.max(20, Math.min(20, dimensions.width / 80))
     const columns = Math.floor(dimensions.width / fontSize)
     
     // Create drops array
@@ -80,7 +80,7 @@ const MatrixBackground = () => {
         
         // Color gradient based on position
         const opacity = Math.min(1, (drops[i] * fontSize) / dimensions.height)
-        const colorIntensity = 1 - opacity * 0.7
+        //const colorIntensity = 1 - opacity * 0.9
         
         // Base color
         let color
@@ -94,12 +94,14 @@ const MatrixBackground = () => {
         }
         
         // Apply intensity
-        ctx.fillStyle = color
-        ctx.globalAlpha = colorIntensity
+        //ctx.fillStyle = color
+        ctx.fillStyle = '#E41F1F'
+        //ctx.globalAlpha = colorIntensity
+        ctx.globalAlpha = 1
         
         // Draw character with glow effect for brighter ones
         if (opacity > 0.7) {
-          ctx.shadowBlur = 10
+          ctx.shadowBlur = 30
           ctx.shadowColor = currentColors.glow
         } else {
           ctx.shadowBlur = 0
@@ -123,8 +125,17 @@ const MatrixBackground = () => {
 
     // Animation loop
     let animationId
-    const animate = () => {
-      draw()
+    let lastTime = 0
+    const frameInterval = 60
+
+    const animate = (currentTime) => {
+      if (!lastTime) lastTime = currentTime;
+      const deltaTime = currentTime - lastTime
+      if (deltaTime > frameInterval){
+        draw()
+        lastTime = currentTime
+      }
+   
       animationId = requestAnimationFrame(animate)
     }
     
@@ -143,7 +154,7 @@ const MatrixBackground = () => {
       ref={canvasRef}
       className="fixed top-0 left-0 w-full h-full pointer-events-none z-0"
       style={{
-        opacity: isDarkMode ? 0.15 : 0.1, // Subtle in light mode, slightly more visible in dark
+        opacity: isDarkMode ? 0.4 : 0.25, // Subtle in light mode, slightly more visible in dark
         transition: 'opacity 0.3s ease'
       }}
     />

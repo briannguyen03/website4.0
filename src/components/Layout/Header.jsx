@@ -56,10 +56,10 @@ const Header = () => {
             >
               {isDarkMode ? (
                 // Shades closed for dark mode - eye closed (blocking the light)
-                <FiIcons.FiEyeOff size={20} title="Shades closed (dark mode)" />
+                <FiIcons.FiSunrise size={20} title="Shades closed (dark mode)" />
               ) : (
                 // Shades open for light mode - eye open (seeing the light)
-                <FiIcons.FiEye size={20} title="Shades open (light mode)" />
+                <FiIcons.FiSunset size={20} title="Shades open (light mode)" />
               )}
             </button>
 
