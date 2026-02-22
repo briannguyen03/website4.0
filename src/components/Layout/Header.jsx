@@ -21,7 +21,7 @@ const Header = () => {
           {/* Logo/Name */}
           <Link to="/" className="flex items-center space-x-2 no-underline">
             <span className="text-xl font-bold text-accent font-heading">Brian Nguyen</span>
-            <span className="text-sm text-text-secondary hidden md:inline">@ UVic</span>
+            <span className="text-md text-text-secondary hidden md:inline">@ UVic</span>
           </Link>
 
           {/* Navigation */}

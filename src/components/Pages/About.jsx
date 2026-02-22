@@ -1,5 +1,6 @@
 import React from 'react'
 import * as FiIcons from 'react-icons/fi'
+import { Link } from 'react-router-dom'
 
 const About = () => {
   const education = [
@@ -75,9 +76,9 @@ const About = () => {
               </p>
               <p>
                 I've built some pretty cool things during my studies — check them out on my 
-                <a href="/projects" className="text-accent hover:text-accent-hover ml-1">
-                  projects page
-                </a>!
+                <Link to="/projects" className="text-accent hover:text-accent-hover ml-1">
+                   projects page
+                </Link>!
               </p>
             </div>
           </div>

@@ -32,9 +32,6 @@ const Footer = () => {
               <FiIcons.FiMapPin className="text-accent" />
               <span className="text-text-secondary">Victoria, BC, Canada</span>
             </div>
-            <p className="text-sm text-text-secondary">
-              Software Engineering Student @ University of Victoria
-            </p>
           </div>
 
           {/* Middle Section - Social Links */}
@@ -69,9 +66,9 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="mt-8 pt-6 border-t border-border text-center">
           <p className="text-xs text-text-secondary">
-            This portfolio is open source. Feel free to explore the code on{' '}
+            vibed coded with clawbot and is open source. Feel free to explore the code on{' '}
             <a
-              href="https://github.com/briannguyen03"
+              href="https://github.com/briannguyen03/react_portfolio"
               target="_blank"
               rel="noopener noreferrer"
               className="text-accent hover:text-accent-hover"

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 // Temporarily removed framer-motion due to errors
-// import { motion, AnimatePresence } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { projects, categories, technologies } from '../../utils/projectData'
 import * as FiIcons from 'react-icons/fi'
 
@@ -10,9 +10,9 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null)
 
   const filteredProjects = projects.filter(project => {
-    const categoryMatch = selectedCategory === 'All' || project.category === selectedCategory
+    //const categoryMatch = selectedCategory === 'All' || project.category === selectedCategory
     const techMatch = selectedTech === 'All' || project.technologies.includes(selectedTech)
-    return categoryMatch && techMatch
+    return techMatch
   })
 
   const categoryIcons = {
@@ -39,9 +39,9 @@ const Projects = () => {
           <div>
             <h3 className="text-xl font-bold mb-1">{project.title}</h3>
             <div className="flex items-center space-x-2">
-              <span className="px-2 py-1 bg-secondary text-xs rounded-full">
+              {/* <span className="px-2 py-1 bg-secondary text-xs rounded-full">
                 {project.category}
-              </span>
+              </span> */}
             </div>
           </div>
         </div>
@@ -114,9 +114,9 @@ const Projects = () => {
           <div>
             <h2 className="text-2xl font-bold">{project.title}</h2>
             <div className="flex items-center space-x-2 mt-1">
-              <span className="px-3 py-1 bg-secondary text-sm rounded-full">
+              {/* <span className="px-3 py-1 bg-secondary text-sm rounded-full">
                 {project.category}
-              </span>
+              </span> */}
             </div>
           </div>
           <button
@@ -237,7 +237,7 @@ const Projects = () => {
         
         <div className="flex flex-col md:flex-row gap-4">
           {/* Category Filter */}
-          <div className="flex-1">
+          {/* <div className="flex-1">
             <label className="block text-sm font-medium mb-2">Category</label>
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
@@ -254,7 +254,7 @@ const Projects = () => {
                 </button>
               ))}
             </div>
-          </div>
+          </div> */}
 
           {/* Technology Filter */}
           <div className="flex-1">
@@ -290,7 +290,7 @@ const Projects = () => {
         {/* Results Count */}
         <div className="mt-4 text-text-secondary">
           Showing {filteredProjects.length} of {projects.length} projects
-          {(selectedCategory !== 'All' || selectedTech !== 'All') && (
+          {(selectedTech !== 'All') && (
             <button
               onClick={() => {
                 setSelectedCategory('All')

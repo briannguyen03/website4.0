@@ -27,7 +27,7 @@ const Home = () => {
     },
   ]
 
-  const skills = ['Python', 'C', 'JavaScript', 'Java', 'React', 'Node.js', 'Git']
+  const skills = ['Python', 'C', 'Java', 'JavaScript', 'React', 'Git', 'CI/CD', 'French scrambled eggs', 'OG fornite player']
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -51,7 +51,7 @@ const Home = () => {
             interactive applications, machine learning projects, and clean, 
             efficient code.
           </p>
-          <div className="flex flex-wrap justify-center gap-3 mb-8">
+          <div className="flex flex-wrap justify-center gap-3 mb-8 max-w-md mx-auto">
             {skills.map((skill) => (
               <span
                 key={skill}

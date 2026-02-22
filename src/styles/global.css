@@ -4,8 +4,8 @@
 
 /* Global Styles with Theme Variables */
 :root {
-  /* Light Theme (Default) */
-  --bg-primary: #FFFFFF;
+  /* Light Theme */
+  --bg-primary: #ffffff;
   --bg-secondary: #F8FAFC;
   --text-primary: #1F2937;
   --text-secondary: #4B5563;
@@ -19,15 +19,15 @@
   --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
   --font-body: 'Source Code Pro', monospace;
 }
-
+/* #E41F1F */
 [data-theme="dark"] {
-  /* Dark Theme (ThinkPad Style) */
+  /* Dark Theme */
   --bg-primary: #0A0A0A;
   --bg-secondary: #1A1A1A;
   --text-primary: #D1D5DB;
   --text-secondary: #9CA3AF;
-  --accent: #D1D5DB; /* Silver */
-  --accent-hover: #E41F1F; /* ThinkPad Red */
+  --accent: #800000; 
+  --accent-hover: #E41F1F ; 
   --border: #374151;
   --card-bg: #1A1A1A;
   --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
