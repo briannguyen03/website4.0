@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useTheme } from '../../context/ThemeContext'
+import MatrixToggle from '../UI/MatrixToggle'
 import * as FiIcons from 'react-icons/fi'
 
 const Header = () => {
@@ -42,6 +43,9 @@ const Header = () => {
                 </Link>
               ))}
             </div>
+
+            {/* Matrix Background Toggle */}
+            <MatrixToggle />
 
             {/* Theme Toggle - Window/Shades Analogy */}
             <button
