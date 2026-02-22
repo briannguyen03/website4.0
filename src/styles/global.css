@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Global Styles with Theme Variables */
+:root {
+  /* Light Theme (Default) */
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F8FAFC;
+  --text-primary: #1F2937;
+  --text-secondary: #4B5563;
+  --accent: #800000; /* Maroon */
+  --accent-hover: #FF6347; /* Tomato */
+  --border: #E5E7EB;
+  --card-bg: #FFFFFF;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  
+  /* Fonts */
+  --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Source Code Pro', monospace;
+}
+
+[data-theme="dark"] {
+  /* Dark Theme (ThinkPad Style) */
+  --bg-primary: #0A0A0A;
+  --bg-secondary: #1A1A1A;
+  --text-primary: #D1D5DB;
+  --text-secondary: #9CA3AF;
+  --accent: #D1D5DB; /* Silver */
+  --accent-hover: #E41F1F; /* ThinkPad Red */
+  --border: #374151;
+  --card-bg: #1A1A1A;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5), 0 2px 4px -1px rgba(0, 0, 0, 0.4);
+}
+
+/* Custom styles that extend Tailwind */
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-hover);
+}

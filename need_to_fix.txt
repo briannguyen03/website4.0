@@ -1,0 +1,61 @@
+Here are the features that are not working as of 5:01pm Feb 21
+
+1. About page does not load
+2. Projects page does not load (that means the view all projects also does not work, and any specific project link does not work)
+3. Light/Dark mode not working. The logo will togle but no actual 
+changes to the theme is made
+4. View Resume button doesn't load
+
+Here are some of the errors
+This is the console message when trying to load the about and projects page 
+"Uncaught Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `About`.
+    React 15
+react-dom.development.js:28478:17
+" + more similar error codes
+
+And when trying to see my resume
+http://localhost:3000/assets/BrianNguyen_d.pdf sent back an error.
+
+Error code: 404 Not Found
+
+Here are the issues that are not working as of 5:23 Feb 21
+1.Projects page does not load therefore the individual projects on the home page also does not load
+2.The icons are all defualt "<>". Like icons for the home page, about, projects, contact github, linkedin are all "<>"
+
+Here are the error logs for the projects page
+"Uncaught Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Projects`.
+    React 15
+react-dom.development.js:28478:17
+"
+"Uncaught Error: Element type is invalid: expected a string (for built-in components) or a class/function (for composite components) but got: undefined. You likely forgot to export your component from the file it's defined in, or you might have mixed up default and named imports.
+
+Check the render method of `Projects`.
+    React 18
+react-dom.development.js:28478:17
+"
+"The above error occurred in the <div> component:
+
+div
+div
+div
+ProjectCard@http://localhost:3000/src/components/Pages/Projects.jsx:53:23
+div
+section
+div
+Projects@http://localhost:3000/src/components/Pages/Projects.jsx:23:59
+RenderedRoute@http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=85b9e569:4147:7
+Routes@http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=85b9e569:4617:7
+main
+div
+Router@http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=85b9e569:4565:7
+BrowserRouter@http://localhost:3000/node_modules/.vite/deps/react-router-dom.js?v=85b9e569:5311:7
+ThemeProvider@http://localhost:3000/src/context/ThemeContext.jsx:25:30
+App
+
+Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://reactjs.org/link/error-boundaries to learn more about error boundaries. react-dom.development.js:18704:15
+"
