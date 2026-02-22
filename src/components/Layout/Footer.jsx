@@ -8,17 +8,17 @@ const Footer = () => {
     {
       name: 'GitHub',
       url: 'https://github.com/briannguyen03',
-      icon: <FiIcons.FiCode />,
+      icon: <FiIcons.FiGithub />,
     },
     {
       name: 'LinkedIn',
       url: 'https://www.linkedin.com/in/brian-nguyen-19920027a/',
-      icon: <FiIcons.FiCode />,
+      icon: <FiIcons.FiLinkedin />,
     },
     {
       name: 'Email',
       url: 'mailto:nguyen.brian1403@gmail.com',
-      icon: <FiIcons.FiCode />,
+      icon: <FiIcons.FiMail />,
     },
   ]
 
@@ -29,7 +29,7 @@ const Footer = () => {
           {/* Left Section - Info */}
           <div className="mb-6 md:mb-0 text-center md:text-left">
             <div className="flex items-center justify-center md:justify-start space-x-2 mb-2">
-              <FiIcons.FiCode className="text-accent" />
+              <FiIcons.FiMapPin className="text-accent" />
               <span className="text-text-secondary">Victoria, BC, Canada</span>
             </div>
             <p className="text-sm text-text-secondary">

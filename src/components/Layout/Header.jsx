@@ -8,10 +8,10 @@ const Header = () => {
   const { isDarkMode, toggleTheme } = useTheme()
 
   const navItems = [
-    { path: '/', label: 'Home', icon: <FiIcons.FiCode /> },
-    { path: '/about', label: 'About', icon: <FiIcons.FiCode /> },
-    { path: '/projects', label: 'Projects', icon: <FiIcons.FiCode /> },
-    { path: '/contact', label: 'Contact', icon: <FiIcons.FiCode /> },
+    { path: '/', label: 'Home', icon: <FiIcons.FiHome /> },
+    { path: '/about', label: 'About', icon: <FiIcons.FiUser /> },
+    { path: '/projects', label: 'Projects', icon: <FiIcons.FiBriefcase /> },
+    { path: '/contact', label: 'Contact', icon: <FiIcons.FiMail /> },
   ]
 
   return (
@@ -43,13 +43,20 @@ const Header = () => {
               ))}
             </div>
 
-            {/* Theme Toggle */}
+            {/* Theme Toggle - Window/Shades Analogy */}
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full bg-secondary hover:bg-accent hover:text-white transition-colors border-0 cursor-pointer"
-              aria-label={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+              aria-label={isDarkMode ? 'Switch to light mode (open shades)' : 'Switch to dark mode (close shades)'}
+              title={isDarkMode ? 'Open shades for light mode' : 'Close shades for dark mode'}
             >
-              {isDarkMode ? <FiIcons.FiCode size={20} /> : <FiIcons.FiCode size={20} />}
+              {isDarkMode ? (
+                // Shades closed for dark mode - eye closed (blocking the light)
+                <FiIcons.FiEyeOff size={20} title="Shades closed (dark mode)" />
+              ) : (
+                // Shades open for light mode - eye open (seeing the light)
+                <FiIcons.FiEye size={20} title="Shades open (light mode)" />
+              )}
             </button>
 
             {/* Mobile menu button */}

@@ -16,10 +16,10 @@ const Projects = () => {
   })
 
   const categoryIcons = {
-    'Interactive': <FiIcons.FiEye className="text-blue-500" />,
-    'Machine Learning': <FiIcons.FiCpu className="text-green-500" />,
-    'Computer Vision': <FiIcons.FiEye className="text-purple-500" />,
-    'Creative AI': <FiIcons.FiPalette className="text-red-500" />,
+    'Interactive': <FiIcons.FiCode className="text-blue-500" />,
+    'Machine Learning': <FiIcons.FiCode className="text-green-500" />,
+    'Computer Vision': <FiIcons.FiCode className="text-purple-500" />,
+    'Creative AI': <FiIcons.FiCode className="text-red-500" />,
   }
 
   const ProjectCard = ({ project }) => (
@@ -82,7 +82,7 @@ const Projects = () => {
                 className="p-2 bg-secondary rounded-lg hover:bg-border transition-colors"
                 aria-label="Live Demo"
               >
-                <FiIcons.FiExternalLink />
+                <FiIcons.FiCode />
               </a>
             )}
             <a
@@ -92,7 +92,7 @@ const Projects = () => {
               className="p-2 bg-secondary rounded-lg hover:bg-border transition-colors"
               aria-label="View Code"
             >
-              <FiIcons.FiGithub />
+              <FiIcons.FiCode />
             </a>
           </div>
         </div>
@@ -124,7 +124,7 @@ const Projects = () => {
             className="p-2 hover:bg-secondary rounded-lg transition-colors"
             aria-label="Close"
           >
-            <FiIcons.FiX size={24} />
+            <FiIcons.FiCode size={24} />
           </button>
         </div>
 
@@ -193,7 +193,7 @@ const Projects = () => {
                 rel="noopener noreferrer"
                 className="flex-1 px-4 py-3 bg-accent text-white rounded-lg hover:bg-accent-hover transition-colors flex items-center justify-center space-x-2"
               >
-                <FiIcons.FiExternalLink />
+                <FiIcons.FiCode />
                 <span>Live Demo</span>
               </a>
             )}
@@ -203,7 +203,7 @@ const Projects = () => {
               rel="noopener noreferrer"
               className="flex-1 px-4 py-3 border-2 border-accent text-accent rounded-lg hover:bg-accent hover:text-white transition-colors flex items-center justify-center space-x-2"
             >
-              <FiIcons.FiGithub />
+              <FiIcons.FiCode />
               <span>View Code</span>
             </a>
           </div>
