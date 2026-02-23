@@ -15,7 +15,7 @@ function App() {
   return (
     <ThemeProvider>
       <MatrixProvider>
-        <Router basename="/website4.0">
+        <Router>
           <div className="min-h-screen flex flex-col bg-primary relative">
             <MatrixBackground />
             <div className="relative z-10">
