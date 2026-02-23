@@ -31,10 +31,11 @@ const Home = () => {
 
   // Sprite animation state
   const [currentFrame, setCurrentFrame] = useState(0)
+  const base = import.meta.env.BASE_URL
   const frames = [
-    'assets/frame1-removebg-preview.png',
-    'assets/frame2-removebg-preview.png',
-    'assets/frame3-removebg-preview.png',
+    `${base}assets/frame1-removebg-preview.png`,
+    `${base}assets/frame2-removebg-preview.png`,
+    `${base}assets/frame3-removebg-preview.png`,
   ]
 
   // Animation loop
