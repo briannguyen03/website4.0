@@ -24,7 +24,6 @@ const About = () => {
     { name: 'Hiking', icon: <FiIcons.FiCode />, color: 'text-green-500' },
     { name: 'Films', icon: <FiIcons.FiCode />, color: 'text-purple-500' },
     { name: 'Music', icon: <FiIcons.FiCode />, color: 'text-red-500' },
-    { name: 'Coding', icon: <FiIcons.FiCode />, color: 'text-accent' },
   ]
 
   return (
