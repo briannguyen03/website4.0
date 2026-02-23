@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import * as FiIcons from 'react-icons/fi'
 
@@ -29,16 +29,36 @@ const Home = () => {
 
   const skills = ['Python', 'C', 'Java', 'JavaScript', 'React', 'Git', 'CI/CD', 'French scrambled eggs', 'OG fornite player']
 
+  // Sprite animation state
+  const [currentFrame, setCurrentFrame] = useState(0)
+  const frames = [
+    '/assets/frame1-removebg-preview.png',
+    '/assets/frame2-removebg-preview.png',
+    '/assets/frame3-removebg-preview.png',
+    '/assets/frame4-removebg-preview.png'
+  ]
+
+  // Animation loop
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentFrame((prevFrame) => (prevFrame + 1) % frames.length)
+    }, 500) // Change frame every 500ms
+
+    return () => clearInterval(interval)
+  }, [frames.length])
+
   return (
     <div className="container mx-auto px-4 py-12">
       {/* Hero Section */}
       <section className="text-center mb-16">
         <div className="mb-8">
-          <div className="w-48 h-48 mx-auto mb-6 rounded-full border-4 border-accent overflow-hidden bg-secondary">
-            {/* Placeholder for profile image */}
-            <div className="w-full h-full flex items-center justify-center text-4xl">
-              👨‍💻
-            </div>
+          <div className="profile-sprite-container mx-auto mb-6">
+            {/* Animated sprite */}
+            <img 
+              src={frames[currentFrame]} 
+              alt="Animated character sprite" 
+              className="profile-sprite-image"
+            />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold mb-4 text-text-primary">
             Brian <span className="text-accent">Nguyen</span>
