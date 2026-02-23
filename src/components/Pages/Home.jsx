@@ -32,9 +32,9 @@ const Home = () => {
   // Sprite animation state
   const [currentFrame, setCurrentFrame] = useState(0)
   const frames = [
-    '/assets/frame1-removebg-preview.png',
-    '/assets/frame2-removebg-preview.png',
-    '/assets/frame3-removebg-preview.png',
+    'assets/frame1-removebg-preview.png',
+    'assets/frame2-removebg-preview.png',
+    'assets/frame3-removebg-preview.png',
   ]
 
   // Animation loop
