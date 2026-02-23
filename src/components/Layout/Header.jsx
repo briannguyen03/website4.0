@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useTheme } from '../../context/ThemeContext'
+import MatrixToggle from '../UI/MatrixToggle'
 import * as FiIcons from 'react-icons/fi'
 
 const Header = () => {
@@ -43,6 +44,9 @@ const Header = () => {
               ))}
             </div>
 
+            {/* Matrix Background Toggle */}
+            <MatrixToggle />
+
             {/* Theme Toggle - Window/Shades Analogy */}
             <button
               onClick={toggleTheme}
@@ -52,10 +56,10 @@ const Header = () => {
             >
               {isDarkMode ? (
                 // Shades closed for dark mode - eye closed (blocking the light)
-                <FiIcons.FiEyeOff size={20} title="Shades closed (dark mode)" />
+                <FiIcons.FiSunrise size={20} title="Shades closed (dark mode)" />
               ) : (
                 // Shades open for light mode - eye open (seeing the light)
-                <FiIcons.FiEye size={20} title="Shades open (light mode)" />
+                <FiIcons.FiSunset size={20} title="Shades open (light mode)" />
               )}
             </button>
 
