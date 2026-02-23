@@ -66,7 +66,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="mt-8 pt-6 border-t border-border text-center">
           <p className="text-xs text-text-secondary">
-            Vibe coded with clawbot (Thanks Hank!) and is open source. Feel free to explore the code on{' '}
+            This page is open source. Feel free to explore the code on{' '}
             <a
               href="https://github.com/briannguyen03/react_portfolio"
               target="_blank"
