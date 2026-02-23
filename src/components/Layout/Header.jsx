@@ -47,7 +47,7 @@ const Header = () => {
             {/* Matrix Background Toggle */}
             <MatrixToggle />
 
-            {/* Theme Toggle - Window/Shades Analogy */}
+            {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
               className="p-2 rounded-full bg-secondary hover:bg-accent hover:text-white transition-colors border-0 cursor-pointer"
@@ -62,14 +62,7 @@ const Header = () => {
                 <FiIcons.FiSunset size={20} title="Shades open (light mode)" />
               )}
             </button>
-
-            {/* Mobile menu button */}
-            <button className="md:hidden p-2 rounded-md bg-secondary border-0 cursor-pointer">
-              <span className="sr-only">Menu</span>
-              <div className="w-6 h-0.5 bg-text-primary mb-1"></div>
-              <div className="w-6 h-0.5 bg-text-primary mb-1"></div>
-              <div className="w-6 h-0.5 bg-text-primary"></div>
-            </button>
+            
           </nav>
         </div>
 
