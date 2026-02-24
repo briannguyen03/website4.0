@@ -52,10 +52,10 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Right Section - Copyright */}
+          {/* Right Section */}
           <div className="text-center md:text-right">
             <p className="text-sm text-text-secondary">
-              © {currentYear} Brian Nguyen. All rights reserved.
+              Created by Brian Nguyen
             </p>
             <p className="text-xs text-text-secondary mt-1">
               Built with React & Vite

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// Temporarily removed framer-motion due to errors
 import { motion, AnimatePresence } from 'framer-motion'
 import { projects, categories, technologies } from '../../utils/projectData'
 import * as FiIcons from 'react-icons/fi'
@@ -10,26 +9,23 @@ const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null)
 
   const filteredProjects = projects.filter(project => {
-    //const categoryMatch = selectedCategory === 'All' || project.category === selectedCategory
     const techMatch = selectedTech === 'All' || project.technologies.includes(selectedTech)
     return techMatch
   })
 
-  const categoryIcons = {
-    'Interactive': <FiIcons.FiCode className="text-blue-500" />,
-    'Machine Learning': <FiIcons.FiCode className="text-green-500" />,
-    'Computer Vision': <FiIcons.FiCode className="text-purple-500" />,
-    'Creative AI': <FiIcons.FiCode className="text-red-500" />,
-  }
 
   const ProjectCard = ({ project }) => (
     <div
-      className="bg-card-bg rounded-xl border border-border overflow-hidden shadow-card hover:shadow-lg transition-shadow"
+    className="bg-card-bg rounded-xl border border-border overflow-hidden shadow-card transition-all duration-300 hover:-translate-y-3 hover:scale-[1.02] hover:shadow-2xl hover:border-[var(--accent-hover)]"
     >
       {/* Project Image */}
       <div className="h-48 bg-secondary flex items-center justify-center">
         <div className="text-4xl">
-          {categoryIcons[project.category] || <FiIcons.FiCode className="text-accent" />}
+          <img 
+          src={project.image}
+          className="project-img" 
+          alt="Project Image"
+          />
         </div>
       </div>
 
@@ -39,9 +35,6 @@ const Projects = () => {
           <div>
             <h3 className="text-xl font-bold mb-1">{project.title}</h3>
             <div className="flex items-center space-x-2">
-              {/* <span className="px-2 py-1 bg-secondary text-xs rounded-full">
-                {project.category}
-              </span> */}
             </div>
           </div>
         </div>
@@ -124,7 +117,7 @@ const Projects = () => {
             className="p-2 hover:bg-secondary rounded-lg transition-colors"
             aria-label="Close"
           >
-            <FiIcons.FiCode size={24} />
+            <FiIcons.FiXCircle size={24} />
           </button>
         </div>
 
@@ -132,9 +125,11 @@ const Projects = () => {
         <div className="p-6">
           {/* Project Image */}
           <div className="h-64 bg-secondary rounded-lg mb-6 flex items-center justify-center">
-            <div className="text-6xl">
-              {categoryIcons[project.category] || <FiIcons.FiCode className="text-accent" />}
-            </div>
+              <img 
+              src={project.image}
+              className="project-img" 
+              alt="Project Image"
+              />
           </div>
 
           {/* Description */}
@@ -221,8 +216,7 @@ const Projects = () => {
         <h1 className="text-4xl font-bold mb-4">Projects</h1>
         <p className="text-lg text-text-secondary max-w-3xl">
           A collection of my work spanning interactive simulations, machine learning,
-          computer vision, and creative applications. Each project represents a learning
-          journey and technical challenge overcome.
+          computer vision, and creative applications. More to come soon!
         </p>
       </section>
 

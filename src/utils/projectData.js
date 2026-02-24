@@ -4,11 +4,10 @@ export const projects = [
     title: 'The Game of Life',
     description: 'Interactive implementation of Conway\'s Game of Life using p5.js with real-time simulation and customizable rules.',
     longDescription: 'A zero-player game that simulates cellular automata based on simple rules. Features include adjustable grid size, speed control, pattern presets, and the ability to create custom starting configurations.',
-    technologies: ['JavaScript', 'p5.js', 'HTML5', 'CSS3'],
-    category: 'Interactive',
+    technologies: ['JavaScript', 'HTML/CSS' ,'Node.js'],
     demoUrl: '#',
-    codeUrl: 'https://github.com/briannguyen03/website3.0/tree/main/Projects',
-    image: '/assets/game_of_life.png',
+    codeUrl: 'https://github.com/briannguyen03/',
+    image: 'assets/game_of_life.png',
     features: [
       'Real-time cellular simulation',
       'Adjustable grid size and speed',
@@ -28,11 +27,10 @@ export const projects = [
     title: 'Blackjack Agent',
     description: 'AI agent that learns optimal blackjack strategy through reinforcement learning (Q-learning).',
     longDescription: 'A machine learning project that trains an agent to play blackjack optimally using reinforcement learning. The agent learns through self-play and develops strategies for hitting, standing, and doubling down.',
-    technologies: ['Python', 'NumPy', 'Matplotlib', 'Reinforcement Learning'],
-    category: 'Machine Learning',
+    technologies: ['C','Machine Learning'],
     demoUrl: '#',
-    codeUrl: 'https://github.com/briannguyen03',
-    image: '/assets/blackjackAgentscreenshot.png',
+    codeUrl: 'https://github.com/briannguyen03/blackjack-agent',
+    image: 'assets/blackjackAgentscreenshot.png',
     features: [
       'Q-learning implementation',
       'Visualization of learning progress',
@@ -43,44 +41,41 @@ export const projects = [
     learnings: [
       'Reinforcement learning fundamentals',
       'Q-learning algorithm implementation',
-      'State-action value optimization',
-      'Visualization of learning processes'
+      'State-action value optimization'
     ]
   },
   {
-    id: 'hand-detection',
-    title: 'Hand Detection',
-    description: 'Real-time hand pose estimation using TensorFlow.js and computer vision techniques.',
-    longDescription: 'A web-based application that uses machine learning to detect and track hand poses in real-time through a webcam. The system identifies 21 keypoints on the hand and can be used for gesture recognition.',
-    technologies: ['JavaScript', 'TensorFlow.js', 'Computer Vision', 'MediaPipe'],
-    category: 'Computer Vision',
+    id: 'lim-scraper',
+    title: 'Co-op Portal Scraper',
+    description: 'An automated co-op job scraper custom made for UVic LIM portal.',
+    longDescription: "This project provides a robust, two-stage workflow designed to bridge the gap between browsing a job portal and identifying relevant roles. The core functionality is driven by a Python scraper using Selenium and BeautifulSoup. The system also allows session cookies to be detected and saved, bypassing the need for manual logins in the future. Once the scraper extracts job data—including titles, qualifications, and descriptions—the information is passed to a matching client. This client calls an LLM API (such as ChatGPT or DeepSeek) using a custom system prompt containing the user's skillset to evaluate compatibility with the job description.",
+    technologies: ['Python', 'Bash', 'Web Scraping', 'HTML/CSS'],
     demoUrl: '#',
-    codeUrl: 'https://github.com/briannguyen03/website3.0/tree/main/Projects',
-    image: '/assets/handpose-keypoints-map.png',
+    codeUrl: 'https://github.com/briannguyen03/lim_scraper',
+    image: 'assets/lim_scraper_demo.png',
     features: [
-      'Real-time hand tracking',
-      '21-point hand landmark detection',
-      'Gesture recognition',
-      'Webcam integration',
-      'Visual feedback system'
+      'Integrated runner script',
+      'Session Persistence',
+      'Structured .tsv output for easy export',
+      'Logging to easily track/check for errors',
+      'Auto-Dependency Management'
     ],
     learnings: [
-      'Real-time computer vision pipelines',
-      'TensorFlow.js for browser-based ML',
-      'Hand pose estimation techniques',
-      'Performance optimization for real-time applications'
+      'Bash scripting',
+      'Handle HTML layout for scraping',
+      'Cookies detection and saving',
+      'Communication between two running programs'
     ]
   },
   {
     id: 'drawing-with-ai',
     title: 'Drawing Using AI',
     description: 'Interactive drawing application enhanced with AI-assisted features and style transfer.',
-    longDescription: 'A creative tool that combines traditional drawing with AI capabilities. Features include style transfer, auto-completion, and intelligent brush suggestions based on drawing context.',
-    technologies: ['JavaScript', 'p5.js', 'ML5.js', 'Creative AI'],
-    category: 'Creative AI',
+    longDescription: "A creative tool that combines traditional drawing with AI capabilities. Features include style transfer, auto-completion, and intelligent brush suggestions based on drawing context.",
+    technologies: ['JavaScript', 'Node.js', 'Machine Learning'],
     demoUrl: '#',
-    codeUrl: 'https://github.com/briannguyen03/website3.0/tree/main/Projects',
-    image: '/assets/handpose_img.png',
+    codeUrl: 'https://www.linkedin.com/posts/bnguyen2027_near-the-end-of-december-i-started-experimenting-ugcPost-7284449290159058944-Nz2u?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEQEeQUBrdVoBA-wQlT4jWn0rKIlG5mG8b4',
+    image: 'assets/handpose_img.png',
     features: [
       'AI-assisted drawing',
       'Style transfer',
@@ -108,9 +103,6 @@ export const categories = [
 export const technologies = [
   'JavaScript',
   'Python',
-  'p5.js',
-  'TensorFlow.js',
-  'React',
   'Node.js',
   'HTML/CSS',
   'Machine Learning'

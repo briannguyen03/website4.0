@@ -14,17 +14,19 @@ const About = () => {
 
   const skills = [
     { category: 'Languages', items: ['Python', 'C', 'JavaScript', 'Java', 'HTML/CSS', 'SQL'] },
-    { category: 'Frameworks', items: ['React', 'Node.js', 'Express', 'p5.js', 'TensorFlow.js'] },
+    { category: 'Frameworks', items: ['React', 'Node.js', 'Express', 'p5.js', 'PyTorch'] },
     { category: 'Tools', items: ['Git', 'Docker', 'Linux', 'VS Code', 'Jupyter'] },
     { category: 'Concepts', items: ['Data Structures', 'Algorithms', 'OOP', 'ML', 'APIs'] },
   ]
 
   const interests = [
-    { name: 'Biking', icon: <FiIcons.FiCode />, color: 'text-blue-500' },
-    { name: 'Hiking', icon: <FiIcons.FiCode />, color: 'text-green-500' },
-    { name: 'Films', icon: <FiIcons.FiCode />, color: 'text-purple-500' },
-    { name: 'Music', icon: <FiIcons.FiCode />, color: 'text-red-500' },
+    { name: 'Biking', icon: <FiIcons.FiYoutube />, color: 'text-blue-500', url: 'https://youtu.be/zpfLf-ZzJdE?si=vbRINyQJmIpM-9yh'},
+    { name: 'Hiking', icon: <FiIcons.FiMap />, color: 'text-green-500' },
+    { name: 'Films', icon: <FiIcons.FiFilm />, color: 'text-purple-500', url: 'https://letterboxd.com/Iloveowenwilson/' },
+    { name: 'Music', icon: <FiIcons.FiMusic />, color: 'text-red-500', url: 'https://music.apple.com/profile/bman1469' },
   ]
+
+  
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -37,16 +39,16 @@ const About = () => {
               <div className="w-64 h-64 lg:w-80 lg:h-80 rounded-2xl border-4 border-accent overflow-hidden bg-secondary mx-auto">
                 {/* Placeholder for profile image */}
                 <div className="w-full h-full flex items-center justify-center text-6xl">
-                  👨‍💻
+                  <img src='assets/rasta_man.png'/>
                 </div>
               </div>
               <div className="mt-6 text-center">
                 <div className="flex items-center justify-center space-x-2 mb-2">
-                  <FiIcons.FiCode className="text-accent" />
+                  <FiIcons.FiMapPin className="text-accent" />
                   <span>Victoria, BC, Canada</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
-                  <FiIcons.FiCode className="text-accent" />
+                  <FiIcons.FiCoffee className="text-accent" />
                   <span>Third Year Student</span>
                 </div>
               </div>
@@ -60,24 +62,22 @@ const About = () => {
             </h1>
             <div className="space-y-4 text-lg">
               <p>
-                Hey! I'm <strong>Brian</strong> — a software engineering student in my 
-                <u> third year</u> at the <strong>University of Victoria</strong>.
+                I'm a software engineering student in my  
+                 third year at the <strong>University of Victoria</strong>.
               </p>
               <p>
                 My core programming languages include <strong>Python, C, JavaScript, and Java</strong>. 
                 I enjoy building everything from interactive web applications to machine learning 
-                projects and system-level software.
+                projects and low level software. Recently I have been into the hardware side of tech, and I hope to build my homelab soon.
               </p>
               <p>
-                When I'm not at my desk, you'll find me out on my bike exploring Victoria's trails 
-                or hitting the basketball court. I believe in balancing technical skills with 
-                physical activity and creative hobbies.
+                When I'm not at my desk, you'll find me out on my bike exploring Victoria's trails or hitting the basketball court. So, if you're looking for a plus-one for your ball team or someone to bike with, hit me up!
               </p>
               <p>
-                I've built some pretty cool things during my studies — check them out on my 
+                I think I've built some pretty cool things - check them out on my <br></br>
                 <Link to="/projects" className="text-accent hover:text-accent-hover ml-1">
                    projects page
-                </Link>!
+                </Link>.
               </p>
             </div>
           </div>
@@ -90,8 +90,12 @@ const About = () => {
         <div className="bg-card-bg rounded-xl border border-border p-6 shadow-card">
           {education.map((edu, index) => (
             <div key={index} className="flex items-start space-x-4">
-              <div className="p-3 bg-accent text-white rounded-lg">
-                <FiIcons.FiCode size={24} />
+              <div className="p-3 bg-white text-white rounded-lg">
+              <img 
+                src='assets/Uvic_logo-removebg-preview.png' 
+                className="logo-small" 
+                alt="UVic Logo" 
+              />
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold mb-1">{edu.degree}</h3>
@@ -137,17 +141,27 @@ const About = () => {
             Here are some things I like to do besides coding:
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 md:grid-cols-5 gap-6">
+        <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6">
           {interests.map((interest) => (
-            <div
+            <a
               key={interest.name}
-              className="bg-card-bg rounded-xl border border-border p-6 text-center shadow-card hover:shadow-lg transition-shadow"
+              href={interest.url}
+              target='_blank'
+              rel="noopener noreferrer"
+              className="block p-6 text-center rounded-xl transition-all duration-300
+              bg-card-bg border border-border 
+              shadow-card 
+              /* Hover Effects */
+              hover:-translate-y-2 
+              hover:border-blue-500 
+              hover:shadow-xl 
+              hover:bg-opacity-90"
             >
               <div className={`text-4xl mb-4 ${interest.color}`}>
                 {interest.icon}
               </div>
               <h3 className="text-xl font-bold">{interest.name}</h3>
-            </div>
+            </a>
           ))}
         </div>
       </section>

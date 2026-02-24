@@ -74,6 +74,19 @@ body {
   transform: none;
 }
 
+
+.logo-small {
+  width: 67px;
+  height: auto;
+  object-fit: contain;
+}
+
+.project-img {
+  width: auto;
+  max-height: 250px;
+  object-fit: contain;
+}
+
 ::-webkit-scrollbar-thumb {
   background: var(--accent);
   border-radius: 5px;
