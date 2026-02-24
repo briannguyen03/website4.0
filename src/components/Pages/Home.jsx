@@ -9,25 +9,25 @@ const Home = () => {
       description: 'Conway\'s cellular automaton implemented in p5.js',
       icon: <FiIcons.FiCode />,
       tech: ['JavaScript', 'p5.js'],
-      link: '/projects#game-of-life',
+      link: '/projects',
     },
     {
       title: 'Blackjack Agent',
       description: 'AI agent that learns optimal blackjack strategy',
       icon: <FiIcons.FiCode />,
       tech: ['Python', 'ML'],
-      link: '/projects#blackjack',
+      link: '/projects',
     },
     {
-      title: 'Hand Detection',
-      description: 'Real-time hand pose estimation using ML',
+      title: 'Co-op Portal Scraper',
+      description: 'An automated co-op job scraper custom made for UVic LIM portal.',
       icon: <FiIcons.FiCode />,
-      tech: ['JavaScript', 'TensorFlow.js'],
-      link: '/projects#hand-detection',
+      tech: ['Python', 'Selenium'],
+      link: '/projects',
     },
   ]
 
-  const skills = ['Python', 'C', 'Java', 'JavaScript', 'React', 'Git', 'CI/CD', 'French scrambled eggs', 'OG fornite player']
+  const skills = ['Python', 'C', 'Java', 'JavaScript', 'React', 'Git', 'CI/CD', 'French scrambled eggs', 'OG fornite player', 'YouTube Connoisseur']
 
   // Sprite animation state
   const [currentFrame, setCurrentFrame] = useState(0)
