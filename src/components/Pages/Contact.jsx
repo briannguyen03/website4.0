@@ -18,7 +18,7 @@ const Contact = () => {
     },
     {
       name: 'Resume',
-      url: '/assets/BrianNguyen_d.pdf',
+      url: '/assets/resume.pdf',
       icon: <FiIcons.FiFileText className="text-xl" />,
       buttonColor: 'bg-accent text-white hover:bg-accent-hover',
     },
