@@ -90,7 +90,7 @@ const Home = () => {
               <FiIcons.FiArrowRight />
             </Link>
             <a
-              href="/assets/BrianNguyen_d.pdf"
+              href="/assets/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-3 border-2 border-accent text-accent rounded-lg hover:bg-accent hover:text-white transition-colors no-underline"
