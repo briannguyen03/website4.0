@@ -39,7 +39,7 @@ const Home = () => {
 
   const [currentQuote, setCurrentQuote] = useState({ text: "", author: ""})
 
-  const skills = ['Python', 'C', 'Java', 'JavaScript', 'React', 'Git', 'CI/CD', 'French scrambled eggs', 'OG fornite player', 'YouTube Connoisseur']
+  const skills = ['Python', 'C', 'Java', 'JavaScript', 'React', 'Git', 'CI/CD', 'French scrambled eggs', 'YouTube Connoisseur']
 
   // Sprite animation state
   const [currentFrame, setCurrentFrame] = useState(0)
