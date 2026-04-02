@@ -27,6 +27,18 @@ const Home = () => {
     },
   ]
 
+  const quotes = [
+    { text: "I have divine intellect.", author: "Terry A. Davis" },
+    { text: "...not because they are easy, but because they are hard.", author: "JFK" },
+    { text: "C++ is a horrible language... and limiting your project to C means that you don't screw things up.", author: "Linus Torvalds" },
+    { text: "Today I'm going to show you all of its quirks and features...", author: "Doug DeMuro" },
+    { text: "Do. Or do not. There is no try.", author: "Yoda"},
+    { text: "Boom! Big reveal! I'm a pickle!", author: "Rick C-137"},
+    { text: "π", author: "Archimedes of Syracuse"}
+  ];
+
+  const [currentQuote, setCurrentQuote] = useState({ text: "", author: ""})
+
   const skills = ['Python', 'C', 'Java', 'JavaScript', 'React', 'Git', 'CI/CD', 'French scrambled eggs', 'OG fornite player', 'YouTube Connoisseur']
 
   // Sprite animation state
@@ -40,6 +52,10 @@ const Home = () => {
 
   // Animation loop
   useEffect(() => {
+
+    const randomeIndex = Math.floor(Math.random() * quotes.length);
+    setCurrentQuote(quotes[randomeIndex]);
+
     const interval = setInterval(() => {
       setCurrentFrame((prevFrame) => (prevFrame + 1) % frames.length)
     }, 500) // Change frame every 500ms
@@ -66,11 +82,16 @@ const Home = () => {
           <p className="text-xl text-text-secondary mb-6">
             Software Engineer @ University of Victoria
           </p>
-          <p className="max-w-2xl mx-auto text-lg mb-8 text-text-primary">
-            Third-year software engineering student passionate about building 
-            interactive applications, machine learning projects, and clean, 
-            efficient code.
-          </p>
+
+          <div className="max-w-2xl mx-auto mb-8">
+            <p className="text-lg text-text-primary italic font-mono">
+              "{currentQuote.text}"
+            </p>
+            <p className="text-sm text-text-secondary font-mono mt-2">
+              — {currentQuote.author}
+            </p>
+          </div>
+
           <div className="flex flex-wrap justify-center gap-3 mb-8 max-w-md mx-auto">
             {skills.map((skill) => (
               <span
