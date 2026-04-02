@@ -8,20 +8,20 @@ const MatrixBackground = () => {
   const { isMatrixEnabled } = useMatrix()
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 })
 
-  // Matrix characters - mix of alphanumeric and symbols
+  
   const chars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンabcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-*/=%"#&_(),.;:?!\\|{}<>[]^~'
   
-  // Theme-based colors
+  
   const colors = {
     light: {
-      primary: '#800000', // Maroon accent
-      secondary: '#FF6347', // Tomato hover
-      glow: 'rgba(255, 99, 71, 0.3)' // Tomato glow
+      primary: '#800000', 
+      secondary: '#FF6347', 
+      glow: 'rgba(255, 99, 71, 0.3)' 
     },
     dark: {
-      primary: '#800000', // Maroon accent
-      secondary: '#E41F1F', // ThinkPad Red hover
-      glow: 'rgba(228, 31, 31, 0.3)' // Red glow
+      primary: '#800000',
+      secondary: '#E41F1F', 
+      glow: 'rgba(228, 31, 31, 0.3)'
     }
   }
 

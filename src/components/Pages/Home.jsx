@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import * as FiIcons from 'react-icons/fi'
+import SteeringText from '../UI/SteeringText'
 
 const Home = () => {
   const featuredProjects = [
@@ -76,10 +77,10 @@ const Home = () => {
               className="profile-sprite-image"
             />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-text-primary">
-            Brian <span className="text-accent">Nguyen</span>
-          </h1>
-          <p className="text-xl text-text-secondary mb-6">
+          <div className="flex justify-center -mb-36 overflow-hidden max-w-full">
+            <SteeringText />
+          </div>
+          <p className="text-xl text-text-secondary mb-6 relative z-10">
             Software Engineer @ University of Victoria
           </p>
 
