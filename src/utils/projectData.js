@@ -3,20 +3,18 @@ export const projects = [
     id: 'game-of-life',
     title: 'The Game of Life',
     description: 'Interactive implementation of Conway\'s Game of Life using p5.js with real-time simulation and customizable rules.',
-    longDescription: 'A zero-player game that simulates cellular automata based on simple rules. Features include adjustable grid size, speed control, pattern presets, and the ability to create custom starting configurations.',
+    longDescription: 'A zero-player game that simulates cellular automata based on simple rules. Features include adjustable RGB values and a randomize button.',
     technologies: ['JavaScript', 'HTML/CSS' ,'Node.js'],
     demoUrl: '#',
-    codeUrl: 'https://github.com/briannguyen03/',
+    codeUrl: 'https://briannguyen03.github.io/website3.0/Projects/game_of_life.html',
     image: 'assets/game_of_life.png',
     features: [
-      'Real-time cellular simulation',
-      'Adjustable grid size and speed',
-      'Pattern presets (gliders, pulsars, etc.)',
-      'Custom drawing tools',
-      'Rule customization'
+      'Aesthetically pleasing',
+      'Adjustable RGB',
+      'Random colours',
     ],
     learnings: [
-      'Understanding of cellular automata and emergent behavior',
+      'Understanding of simple automata',
       'Canvas rendering optimization techniques',
       'State management for large 2D arrays',
       'User interface design for interactive simulations'
@@ -26,7 +24,7 @@ export const projects = [
     id: 'blackjack-agent',
     title: 'Blackjack Agent',
     description: 'AI agent that learns optimal blackjack strategy through reinforcement learning (Q-learning).',
-    longDescription: 'A machine learning project that trains an agent to play blackjack optimally using reinforcement learning. The agent learns through self-play and develops strategies for hitting, standing, and doubling down.',
+    longDescription: 'An RL-based agent trained to play Blackjack using Q-Learning and epsilon decay. After simulating 10,000 hands, the model reached a ~41% win rate, approximating the optimal basic strategy through a simple model.',
     technologies: ['C','Machine Learning'],
     demoUrl: '#',
     codeUrl: 'https://github.com/briannguyen03/blackjack-agent',
@@ -34,7 +32,6 @@ export const projects = [
     features: [
       'Q-learning implementation',
       'Visualization of learning progress',
-      'Strategy heatmaps',
       'Performance metrics',
       'Customizable learning parameters'
     ],
@@ -48,7 +45,7 @@ export const projects = [
     id: 'lim-scraper',
     title: 'Co-op Portal Scraper',
     description: 'An automated co-op job scraper custom made for UVic LIM portal.',
-    longDescription: "This project provides a robust, two-stage workflow designed to bridge the gap between browsing a job portal and identifying relevant roles. The core functionality is driven by a Python scraper using Selenium and BeautifulSoup. The system also allows session cookies to be detected and saved, bypassing the need for manual logins in the future. Once the scraper extracts job data—including titles, qualifications, and descriptions—the information is passed to a matching client. This client calls an LLM API (such as ChatGPT or DeepSeek) using a custom system prompt containing the user's skillset to evaluate compatibility with the job description.",
+    longDescription: "Built a Python pipeline that automates the job search process. The system uses Selenium and BeautifulSoup to scrape live listings from co-op portal, handling session authentication to bypass manual logins. Extracted roles are then processed by Deepseek's R1 model that analyzes job descriptions against a user’s specific skillset to provide compatibility scores.",
     technologies: ['Python', 'Bash', 'Web Scraping', 'HTML/CSS'],
     demoUrl: '#',
     codeUrl: 'https://github.com/briannguyen03/lim_scraper',
@@ -58,36 +55,33 @@ export const projects = [
       'Session Persistence',
       'Structured .tsv output for easy export',
       'Logging to easily track/check for errors',
-      'Auto-Dependency Management'
+      'Auto Dependency Management'
     ],
     learnings: [
       'Bash scripting',
       'Handle HTML layout for scraping',
       'Cookies detection and saving',
-      'Communication between two running programs'
+      'Developed RESTful APIs to facilitate communication between the scraper and the matcher'
     ]
   },
   {
     id: 'drawing-with-ai',
     title: 'Drawing Using AI',
-    description: 'Interactive drawing application enhanced with AI-assisted features and style transfer.',
-    longDescription: "A creative tool that combines traditional drawing with AI capabilities. Features include style transfer, auto-completion, and intelligent brush suggestions based on drawing context.",
+    description: 'A drawing application that uses computer vision.',
+    longDescription: "A simple usage of a vision model to detect hands, and translate finger movements to paint on the live webcam canvas",
     technologies: ['JavaScript', 'Node.js', 'Machine Learning'],
     demoUrl: '#',
     codeUrl: 'https://www.linkedin.com/posts/bnguyen2027_near-the-end-of-december-i-started-experimenting-ugcPost-7284449290159058944-Nz2u?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEQEeQUBrdVoBA-wQlT4jWn0rKIlG5mG8b4',
     image: 'assets/handpose_img.png',
     features: [
-      'AI-assisted drawing',
-      'Style transfer',
-      'Auto-completion suggestions',
-      'Multiple brush types',
-      'Export functionality'
+      'Left and right hand dectection for different tools',
+      'Variable brush size',
+      'Pinch to draw',
     ],
     learnings: [
-      'Creative applications of machine learning',
-      'Style transfer algorithms',
-      'Human-AI collaboration interfaces',
-      'Real-time drawing optimization'
+      'Loading and configuring an ml model in javascript',
+      'Writing logic to extract data for each finger',
+      'Drawing on a canvas in p5.js'
     ]
   }
 ]
