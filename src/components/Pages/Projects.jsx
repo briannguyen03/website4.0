@@ -199,7 +199,7 @@ const Projects = () => {
               className="flex-1 px-4 py-3 border-2 border-accent text-accent rounded-lg hover:bg-accent hover:text-white transition-colors flex items-center justify-center space-x-2"
             >
               <FiIcons.FiCode />
-              <span>View Code</span>
+              <span>View Project</span>
             </a>
           </div>
         </div>
