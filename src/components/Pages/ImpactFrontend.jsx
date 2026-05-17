@@ -1,7 +1,6 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-// ── Boot sequence messages: Arch Linux-style with Brian-relevant easter eggs ──
 const BOOT_MSGS = [
   { line: '[    0.000000] Linux version 6.6.1-arch1-1 (brian@archlinux) (gcc (GCC) 13.2.1) #1 SMP PREEMPT_DYNAMIC', delay: 120 },
   { line: '[    0.010000] Command line: BOOT_IMAGE=/vmlinuz-linux root=UUID=brian-nguyen ro quiet', delay: 80 },
@@ -38,7 +37,6 @@ const BOOT_MSGS = [
   { line: '', delay: 80 },
 ]
 
-// ── Hiring reasons revealed on each Enter press ──
 const HIRING_REASONS = [
   '[1/8] Frontend abilities: React, Tailwind, Vite, HTML5, CSS3, Javascript — I am genuinely passionate about design and building good UI/UX',
   '[2/8] Full-stack capable: Node.js, Express, Python, PostgreSQL — Backend dev is what I started on so its natural for me to build full stack apps',
