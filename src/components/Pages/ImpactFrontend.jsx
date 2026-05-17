@@ -7,8 +7,8 @@ const BOOT_MSGS = [
   { line: '[    0.010000] Command line: BOOT_IMAGE=/vmlinuz-linux root=UUID=brian-nguyen ro quiet', delay: 80 },
   { line: '[    0.020000] x86/fpu: Supporting XSAVE feature 0x001: \'x87 floating point registers\'', delay: 60 },
   { line: '[    0.030000] CPU: Full-stack Developer detected (family: React, model: 18.x, stepping: 6)', delay: 100 },
-  { line: '[    0.035000] CPU: Frontend capabilities: [react] [tailwind] [vite] [framer-motion]', delay: 80 },
-  { line: '[    0.040000] CPU: Backend capabilities: [node] [python] [express] [postgresql]', delay: 80 },
+  { line: '[    0.035000] CPU: Frontend capabilities: [react] [tailwind] [vite] [html] [css] [javascript]', delay: 80 },
+  { line: '[    0.040000] CPU: Backend capabilities: [node] [python] [express] [django] [postgresql] [mysql]', delay: 80 },
   { line: '[    0.045000] CPU: Systems capabilities: [c] [java] [git] [docker] [linux]', delay: 80 },
   { line: '[    0.050000] Memory: 16384MB — dedicated to creative problem solving & late-night debugging', delay: 100 },
   { line: '[    0.060000] Kernel: Loaded personality \'INTERACTIVE_WEB\' — interactive web specialist', delay: 80 },
@@ -30,7 +30,7 @@ const BOOT_MSGS = [
   { line: '[  OK  ] Started SSH Agent — brian.nguyen@impact.com', delay: 120 },
   { line: '[  OK  ] Started Portfolio Web Server (React + Vite build pipeline)', delay: 100 },
   { line: '[  OK  ] Established secure connection: brianguyen.me', delay: 100 },
-  { line: '[  OK  ] System integrity verified — no bugs found (just features)', delay: 120 },
+  { line: '[  OK  ] System integrity verified — no bugs found', delay: 120 },
   { line: '[  OK  ] Reachable target: Multi-User Environment (team player detected)', delay: 100 },
   { line: '[  OK  ] Reached target: Graphic Interface — display manager ready', delay: 80 },
   { line: '', delay: 60 },
@@ -40,31 +40,31 @@ const BOOT_MSGS = [
 
 // ── Hiring reasons revealed on each Enter press ──
 const HIRING_REASONS = [
-  '[1/8] Frontend specialist: React, Tailwind, Vite, Framer Motion — shipped production UIs',
-  '[2/8] Full-stack capable: Node.js, Express, Python, PostgreSQL — no hand-holding needed',
-  '[3/8] Low-level chops: C, systems programming, Linux internals — understands what happens under the hood',
-  '[4/8] Self-starter: built a UVic co-op portal scraper with Deepseek R1 matching — automated his own job search',
-  '[5/8] ML curious: Blackjack agent (Q-learning), hand tracking (CV) — learns anything thrown at him',
+  '[1/8] Frontend abilities: React, Tailwind, Vite, HTML5, CSS3, Javascript — I am genuinely passionate about design and building good UI/UX',
+  '[2/8] Full-stack capable: Node.js, Express, Python, PostgreSQL — Backend dev is what I started on so its natural for me to build full stack apps',
+  '[3/8] Low-level chops: C, systems programming, Linux internals — I like to work with low level languages, and tinker with hardware',
+  '[4/8] Self-starter: built a UVic co-op portal scraper with automated Ai matcher — Automated my own job search',
+  '[5/8] ML curious: Blackjack agent (Q-learning), hand tracking (CV) — I have experience building with AI tools, and developing niche AI projects',
   '[6/8] Software Engineering student @ UVic — grinding algorithms, data structures, and architecture',
-  '[7/8] Git + CI/CD fluent — ships clean code, not chaos (see github.com/briannguyen03)',
-  '[8/8] Hires the curious. Hires the builder. Hires Brian Nguyen.  ⟵ Press ENTER to accept',
+  '[7/8] Git + CI/CD fluent — I am comfortable using git through usage in my personal, and academic projects.',
+  '[8/8] I am curious, I am technical, I am looking for a co-op. Hire me? ⟵ Press ENTER to accept',
 ]
 
 const REVEAL_CLOSING = [
   '',
   '╔══════════════════════════════════════════════════════════════╗',
-  '║  IMPACT FRONTEND INTERNSHIP — RECRUITER ACCESS GRANTED      ║',
+  '║  IMPACT FRONTEND INTERNSHIP — RECRUITER ACCESS GRANTED       ║',
   '║                                                              ║',
-  '║  Brian Nguyen                                               ║',
-  '║  brianguyen.me                                              ║',
-  '║  github.com/briannguyen03                                   ║',
-  '║  nguyen.brian1403@gmail.com                                 ║',
+  '║  Brian Nguyen                                                ║',
+  '║  brianguyen.me                                               ║',
+  '║  github.com/briannguyen03                                    ║',
+  '║  nguyen.brian1403@gmail.com                                  ║',
   '║                                                              ║',
-  '║  "I don\'t just write code. I build things that matter."      ║',
+  '║  I look forward to discussing more about my qualifications!  ║',
   '║                                                              ║',
   '╚══════════════════════════════════════════════════════════════╝',
   '',
-  '[SESSION TERMINATED — but the conversation is just getting started]',
+  '[SESSION TERMINATED]',
   '',
 ]
 
@@ -195,7 +195,7 @@ export default function ImpactFrontend() {
     const t = setTimeout(() => {
       if (closingIndex >= 0) {
         setVisibleLines(prev => [...prev, REVEAL_CLOSING[closingIndex]])
-      }
+       }
       setClosingIndex(i => i + 1)
       scrollToBottom()
     }, closingIndex === -1 ? 200 : 100)
