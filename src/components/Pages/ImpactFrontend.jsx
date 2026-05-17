@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 // ── Boot sequence messages: Arch Linux-style with Brian-relevant easter eggs ──
 const BOOT_MSGS = [
@@ -77,6 +78,8 @@ export default function ImpactFrontend() {
   const [qaIndex, setQaIndex] = useState(-1)
   const [closingIndex, setClosingIndex] = useState(-1)
   const [showLoginPrompt, setShowLoginPrompt] = useState(false)
+
+  const navigate = useNavigate()
 
   const terminalRef = useRef(null)
   const containerRef = useRef(null)
@@ -202,6 +205,12 @@ export default function ImpactFrontend() {
 
   // ── Keyboard handler ──
   const handleKeyDown = useCallback((e) => {
+    if (e.key === 'c' && (e.ctrlKey || e.metaKey)) {
+      e.preventDefault()
+      navigate('/projects')
+      return
+    }
+
     if (e.key === 'Enter') {
       e.preventDefault()
 
@@ -310,7 +319,7 @@ export default function ImpactFrontend() {
           {phase === 'done' && (
             <div className="done-message">
               <br />
-              <span className="done-text">[Press Ctrl+C to exit. Or don\'t. I\'ll wait.]</span>
+              <span className="done-text">[Press Ctrl+C to browse my projects →]</span>
               <br />
               <span className={'cursor' + (blink ? '' : ' hidden')}>█</span>
             </div>
