@@ -8,6 +8,7 @@ import Home from './components/Pages/Home'
 import About from './components/Pages/About'
 import Projects from './components/Pages/Projects'
 import Contact from './components/Pages/Contact'
+import ImpactFrontend from './components/Pages/ImpactFrontend'
 import MatrixBackground from './components/UI/MatrixBackground'
 import './styles/global.css'
 
@@ -26,6 +27,7 @@ function App() {
                   <Route path="/about" element={<About />} />
                   <Route path="/projects" element={<Projects />} />
                   <Route path="/contact" element={<Contact />} />
+                  <Route path="/impact-frontend" element={<ImpactFrontend />} />
                 </Routes>
               </main>
               <Footer />
