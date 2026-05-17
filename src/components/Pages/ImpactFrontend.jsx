@@ -38,9 +38,9 @@ const BOOT_MSGS = [
 ]
 
 const HIRING_REASONS = [
-  '[1/8] Frontend abilities: React, Tailwind, Vite, HTML5, CSS3, Javascript — I am genuinely passionate about design and building good UI/UX',
-  '[2/8] Full-stack capable: Node.js, Express, Python, PostgreSQL — Backend dev is what I started on so its natural for me to build full stack apps',
-  '[3/8] Low-level chops: C, systems programming, Linux internals — I like to work with low level languages, and tinker with hardware',
+  '[1/8] Frontend abilities: React, Tailwind, Vite, HTML5, CSS3, Javascript — I am genuinely passionate about design, and building good UI/UX',
+  '[2/8] Full-stack capable: Node.js, Express, Python, PostgreSQL — Backend development is what I started on so I am fluent in full-stack apps',
+  '[3/8] Low-level tinkering: C, systems programming, Linux internals — I like to work with low level languages, and tinker with hardware',
   '[4/8] Self-starter: built a UVic co-op portal scraper with automated Ai matcher — Automated my own job search',
   '[5/8] ML curious: Blackjack agent (Q-learning), hand tracking (CV) — I have experience building with AI tools, and developing niche AI projects',
   '[6/8] Software Engineering student @ UVic — grinding algorithms, data structures, and architecture',
