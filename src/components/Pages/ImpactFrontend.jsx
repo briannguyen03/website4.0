@@ -97,6 +97,15 @@ export default function ImpactFrontend() {
     return () => clearInterval(id)
   }, [])
 
+  // ── Auto-scroll after every content change ──
+  useEffect(() => {
+    requestAnimationFrame(() => {
+      if (terminalRef.current) {
+        terminalRef.current.scrollTop = terminalRef.current.scrollHeight
+      }
+    })
+  }, [visibleLines, phase])
+
   // ── Focus on mount ──
   useEffect(() => {
     if (containerRef.current) containerRef.current.focus()
